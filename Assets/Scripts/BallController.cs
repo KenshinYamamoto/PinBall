@@ -31,8 +31,6 @@ public class BallController : MonoBehaviour
             //GameoverTextにゲームオーバーを表示
             this.gameoverText.GetComponent<Text>().text = "Game Over";
         }
-
-        this.pointsText.GetComponent<Text>().text = points.ToString();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -57,5 +55,6 @@ public class BallController : MonoBehaviour
             //大きい雲に当たったら100点加算する
             this.points += 100;
         }
+        this.pointsText.GetComponent<Text>().text = points.ToString();
     }
 }
